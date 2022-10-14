@@ -12,7 +12,7 @@ int main() {
             break;
         }
         unsigned x;
-        cout << "Enter task number1\n";
+        cout << "Enter task number\n";
         cin >> x;
         switch (x) {
             case 1: {
@@ -30,16 +30,16 @@ int main() {
 
             case 2: {
                 int value;
-                unsigned order = sizeof(int) * 8, mask = pow(2, 31); //mask - число с которым сравниваем
+                unsigned order = sizeof(int) * 8, mask = pow(2, 31);
                 cout << "\n" << "Enter an integer: " << "\n";
                 cin >> value;
-                for (int i = 1; i <= order; ++i) { // один бит с каждым битом числа
-                    putchar(value & mask ? '1' : '0');// побитовове сравнение с маской< представляем числа друг над другом поразрядно проверяем каждое чило если совпало выписываем 1
-                    mask >>= 1; // перемещаем и снова сравниваем(двигаем 1)
-                    if (i % 8 == 0) { //отделяются байты
+                for (int i = 1; i <= order; ++i) {
+                    putchar(value & mask ? '1' : '0');
+                    mask >>= 1;
+                    if (i % 8 == 0) {
                         cout << (' ');
                     }
-                    if (i % order - 1 == 0) { //отделяется знак
+                    if (i % order - 1 == 0) {
                         cout << (' ');
                     }
                 }
