@@ -6,7 +6,7 @@ int main() {
     setlocale(LC_ALL, "Rus");
     do {
         int hello;
-        cout << "\nRun the program?\n" << "1 - yes\n" << "0 - no\n";
+        cout << "Run the program?\n" << "1 - yes\n" << "0 - no\n";
         cin >> hello;
         if (hello == 0) {
             break;
