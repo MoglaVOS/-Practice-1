@@ -53,7 +53,7 @@ int main() {
                 cout << "\nEnter a float number: \n";
                 cin >> numb_f;
                 for (int i = 1; i <= order; ++i) {
-                    if (i == 2 || i == 10) {  //отделяем знак и мантиссу
+                    if (i == 2 || i == 10) {
                         cout << (' ');
                     }
                     putchar(value & mask ? '1' : '0');
